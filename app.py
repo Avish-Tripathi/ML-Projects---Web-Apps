@@ -20,4 +20,4 @@ def predict():
     return render_template('Home.html', prediction_text='Predicted Percentile is {}'.format(output))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
