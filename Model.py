@@ -11,8 +11,6 @@ from sklearn.linear_model import LinearRegression
 regressor= LinearRegression()
 regressor.fit(X, Y)
 
-YLR_pred = regressor.predict(X)
-
 #Saving the model to disk
 pickle.dump(regressor, open('model.pkl','wb'))
 
