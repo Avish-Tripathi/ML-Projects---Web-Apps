@@ -7,7 +7,7 @@ model = pickle.load(open('model.pkl','rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('template/index.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -16,10 +16,10 @@ def predict():
     Predict = model.predict(final)
 
     output = round(Predict[0], 4)
-    if(float(output)<100):
-        return render_template('index.html', prediction_text='Predicted Percentile is {}'.format(output))
-    else:
-         return render_template('Home.html', prediction_text='Predicted Percentile is {}'.format('100'))
+#     if(float(output)<100):
+    return render_template('template/index.html', prediction_text='Predicted Percentile is {}'.format(output))
+#     else:
+#          return render_template('Home.html', prediction_text='Predicted Percentile is {}'.format('100'))
 
 if __name__ == "__main__":
     app.run()
