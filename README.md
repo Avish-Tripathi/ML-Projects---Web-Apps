@@ -1,4 +1,4 @@
-# ML-Projects---Web-Apps
+# ML-Project : Web-App
 JEE Percentile Predictor
 
 A web app which takes inputs as the percentiles of three subjects :
