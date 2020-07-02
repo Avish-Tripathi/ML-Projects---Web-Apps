@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JEE Percentile</title>
+</head>
+<style>
+body{
+        background-image: url(https://img.freepik.com/free-vector/watercolor-abstract-landscape-background_52683-25321.jpg?size=626&ext=jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0 auto;
+        text-align:center;
+}
+input{
+        width: 30%;
+        padding: 8px 20px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        background-color: lightyellow;
+    }
+input[type = submit]{
+        font-size: 24px;
+        font-family: cursive;
+        width: 20%;
+        color: indigo;
+        padding: 14px 10px;
+        margin: 8px 0;
+        background-color: indianred;
+    }
+p{
+    font-family: monospace;
+}
+</style>
+<body  bgcolor="lightblue">
+ <div style="margin: 0 auto;">
+        <br><h1><u><p>
+        <font color="crimson" size="+4">JEE Mains 2020</font><br></u></h1>
+        <h2><font color="firebrick" size="+3">Percentile Predictor</font><br></h2></p>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <font size="+2"><p>
+            <label for="Physics"><b>Enter percentile of Physics: </b></label><br>
+            <input type="text" name="physics" required style="border-radius:14px;"><br>
+            <label for="Chemistry"><b>Enter percentile of Chemistry: </b></label><br>
+            <input type="text" name="chemistry" required style="border-radius:14px;"><br>
+            <label for="Maths"><b>Enter percentile of Mathematics: </b></label><br>
+            <input type="text" name="maths" required style="border-radius:14px;"><br><br>
+            <input type="submit" value="Predict"><br><br>
+            </p></font>
+        </form>
+        <h2><font color="red">{{ prediction_text }}</font></h2>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="/__/firebase/7.15.5/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="/__/firebase/7.15.5/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+</div>
+</body>
+</html>
